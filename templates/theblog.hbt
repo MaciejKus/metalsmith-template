@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Page {{pagination.num}} </title>
+</head>
+<body>
+
+<div class='content'>
+{{#each pagination.files}}
+  <h2><a href="/{{this.currentURL}}">{{this.title}}</a></h2>
+  {{this.description}}
+{{/each}}
+<p>
+<h4><a href="/{{pagination.next.path}}">More Posts</a></h4>
+</div>
+</body>
+</html>
