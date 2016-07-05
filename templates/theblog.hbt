@@ -12,7 +12,13 @@
   {{this.description}}
 {{/each}}
 <p>
-<h4><a href="/{{pagination.next.path}}">More Posts</a></h4>
+<h4>
+  {{#if pagination.previous.path}}
+    <a href="/{{pagination.previous.path}}">Previous Posts</a>  
+  {{/if}}
+  {{#if pagination.next.path}}
+    <a href="/{{pagination.next.path}}">Next Posts</a></h4>
+  {{/if}}
 </div>
 </body>
 </html>
