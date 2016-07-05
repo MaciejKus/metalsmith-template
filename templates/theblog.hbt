@@ -5,6 +5,9 @@
   <title>Blog Page {{pagination.num}} </title>
 </head>
 <body>
+<header>
+  {{> header }}
+</header>
 
 <div class='content'>
 {{#each pagination.files}}
