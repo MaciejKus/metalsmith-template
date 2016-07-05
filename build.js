@@ -1,10 +1,13 @@
 var Metalsmith = require('metalsmith'),
   templates = require('metalsmith-templates'),
+  fs = require('fs'),
+  Handlebars = require('handlebars'),
   collections = require('metalsmith-collections'),
   pagination = require('metalsmith-pagination'),
   compress = require('metalsmith-gzip'),
   markdown = require("metalsmith-markdown");
 
++Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
 
 Metalsmith(__dirname)
     .use(collections({
