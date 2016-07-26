@@ -1,6 +1,6 @@
 ---
 title: Post Title
-template: post.mustache
+template: post.hbt
 currentURL: example.html
 bottomLink: 
 headerLink:
